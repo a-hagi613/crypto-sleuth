@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Crypto Sleuth</title>
+    <link rel="icon" type="image/x-icon" href="snoop1-transformed.jpeg">
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    <!-- bootstrap -->
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/98361f47e7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- main div everthing is wrapped in -->
+    <div class="container-fluid">
+
+        <!-- navbar.  had to use some inline styles to override bootstraps styles -->
+        <nav id="navbar" class="navbar navbar-expand position-fixed"  style = " background-color: black !important;  height:128px !important" >
+       <!--logo and title  -->
+            <a class="navbar-brand" href="#" onClick="window.location.reload();">
+              <h1 id="h11" class="display-1">
+                <img class="navbar-brand" src="snoop1-transformed.jpeg" /> The Crypto
+                Sleuth
+              </h1></a
+            >
+    <!-- navbar menu items -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navbarId">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="#"
+                  onClick="window.location.reload();"
+                >
+                  <i class="fa-solid fa-house"></i> Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#trendingTable" onclick="trendingCrypto()"
+                  ><i class="fa-solid fa-fire-flame-curved"></i> Trending
+                </a>
+              </li>
+             
+            </ul>
+    
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+         
+        </nav>
+        <br><br>   <br><br>  <br><br>  <br><br> 
+        <!-- brief description -->
+        <center>
+        <h4 id="h3"> <strong>All </strong> In One, Crypto <strong> Data</strong>  and <strong>Analytics </strong>Dashboard</h4> <br>
+       <a href="#h1"> <button id="navBtn" onclick="renderTable(page = 1)">  <u>Browse</u> Coins</button></a>
+      </center>
+        <br>
+    
+    
+    <!-- search bar -->
+        <div class="container-fluid" id="formDiv">
+          <form class="d-flex" role="search" id="searchForm">
+            <input
+              name="cryptoName"
+              id="searchBar"
+              class="form-control me-2 border-dark"
+              placeholder="search crypto... "
+              type="text"
+              aria-label="Search"
+            /> 
+            <!--  name="cryptoName"
+              id="searchBar"
+              class="form-control me-2 border-dark"
+              placeholder="search coin..."
+              type="text"
+              placeholder="Search"
+              aria-label="Search" -->
+          </form>
+        </div>
+    
+        <br /><br />    <br /><br />    <br /><br /> <br /><br />        <br><br><br>
+
+        <!-- main crypto table -->
+        <div class="container-fluid" id="hideAlso">
+          <center><h1 id="h1" class="display-2"> Top 250 Crypto </h1></center>
+    
+          <table
+            id="body"
+            class="table table-bordered table-hover"
+            id="listingTable"
+          >
+                <th scope="col"></th>
+                <th scope="col">Name</th>
+                <th scope="col">Ticker</th>
+                <th scope="col">Price</th>
+                <th scope="col">Price Change 24hr</th>
+                <th scope="col">All Time High</th>
+                <th scope="col">All Time Low</th>
+                <th scope="col">Market Cap</th>
+                <th scope="col">Circulating Supply</th>
+                <th scope="col">Total Supply</th>
+    
+              </tr>
+            </thead>
+            <tbody id="data"></tbody>
+          </table>
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item">
+                <button class="page-link btn bg-dark text-white" id="prevButton">
+                  Prev
+                </button>
+              </li>
+              <li class="page-item">
+                <button class="page-link btn bg-dark text-white" id="nextButton">
+                  Next
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+    
+       <!-- api tables -->
+        <center>
+          <div class="crypto"></div>
+          <div class="crypto1"></div>
+        </center>
+        <center>
+          <div class="container-fluid" id="crypto3">
+            <div id="crypto2"></div>
+            <div id="crypto3"></div>
+            <table class="table table-bordered " id="hideTable" hidden>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Ticker</th>
+                  <th>Market Cap Rank</th>
+                </tr>
+              </thead>
+              <tbody id="searchTable"></tbody>
+            </table>
+          </div>
+        </center>
+      </div>
+
+      <footer>
+        <hr>
+        <center>
+        <p>Powered by <a id="footerA" href="https://www.coingecko.com/en/api/documentation"> Coingecko Api</a></p>
+      </footer>
+      </center>
+      
+  </body>
+</html>

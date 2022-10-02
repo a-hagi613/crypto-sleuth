@@ -1,0 +1,128 @@
+
+#footerA{
+    color: black !important;
+}
+    button{
+        background-color: black !important
+      }
+      td img {
+        height: 5rem;
+        width: 5rem;
+        /* margin-right: 0.5rem;
+      margin-top: 0.25rem; */
+        border-radius: 1rem;
+      }
+  
+      img {
+        height: 10rem;
+        width: 10rem;
+        border-radius: 5pc;
+      }
+  
+      .coins {
+        display: grid;
+        justify-content: space-evenly;
+      }
+  
+      .coinDiv {
+        display: flex;
+        justify-content: center;
+        margin-top: 0.25rem;
+        margin-bottom: 0.25rem;
+      }
+  
+      .coinDiv p {
+        margin-top: 0.33rem;
+      }
+  
+      th {
+        text-align: center !important;
+        font-size: 1.5rem !important;
+      }
+  
+      td {
+        text-align: center !important;
+        font-size: 1.1rem !important;
+        font-weight: 500 !important;
+      }
+  
+      table {
+        margin-top: 1.5rem;
+      }
+  
+      #searchBtn {
+      }
+  
+      #prevButton {
+        width: 8rem;
+        height: 4rem;
+        border-radius: 1pc;
+      }
+      #nextButton {
+        width: 8rem;
+        height: 4rem;
+        border-radius: 1pc;
+      }
+  
+      #navbarSupportedContent {
+        margin-left: 11rem;
+        margin-bottom: 3rem;
+        font-size: larger;
+      }
+  
+      #h11 {
+        font-size: 4rem !important;
+        
+      }
+  
+      #searchForm{
+        margin-top: 10rem;
+        margin-left: 5rem;
+      }
+      #searchBar{
+        height: 5rem;
+       border: 3px solid black;
+        border-radius: 5pc;
+        width: 75rem;
+        margin-left: 4rem;
+      }
+  
+      /* .fa-solid {
+        color: grey;
+      } */
+  
+      a {
+        color: white !important;
+      }
+  
+      .fa-solid {
+        color: white;
+        margin: 5px;
+      }
+  
+      #searchTable img {
+        height: 5rem;
+        width: 5rem;
+        border-radius: 1rem;
+      }
+  
+      #navbarId{
+        margin-left: 35rem;
+        font-size: x-large;
+      }
+  
+  
+      body {
+        background-color: white !;
+      }
+  
+      #navBtn{
+        width: 20rem;
+        height: 6rem;
+        border-radius: 5pc;
+        background-color: #212529;
+        color: white;
+        font-size: large;
+        font-weight:600;
+        
+      }
